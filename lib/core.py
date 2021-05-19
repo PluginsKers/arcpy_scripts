@@ -20,7 +20,7 @@ __FRAME__ = ""
 
 print("__________.__               .__               ____  __.                   \n\\______   \\  |  __ __  ____ |__| ____   _____|    |/ _|___________  ______\n |     ___/  | |  |  \\/ ___\\|  |/    \\ /  ___/      <_/ __ \\_  __ \\/  ___/\n |    |   |  |_|  |  / /_/  >  |   |  \\\\___ \\|    |  \\  ___/|  | \\/\\___ \\ \n |____|   |____/____/\\___  /|__|___|  /____  >____|__ \\___  >__|  /____  >\n                    /_____/         \\/     \\/        \\/   \\/           \\/ \n--------------------------------------------------------------------------")
 print(
-    u"开始加载...请稍后，项目文件过大可能需要的时间很长\n如果堆栈出现错误，可以使用Ctrl+c强制退出\n程序当前版本: {0}\nArcGIS内核版本: {1}\nPython版本: {2}\n操作系统: {3}\nGithub开源地址: https://github.com/PluginsKers/ScriptsArcGIS\n--------------------------------------------------------------------------".format(__CONFIG__['version'], arcpy.GetInstallInfo()['Version'], sys.version, sys.platform))
+    u"开始加载...请稍后，项目文件过大可能需要的时间很长\n如果堆栈出现错误，可以使用Ctrl+c强制退出\n程序当前版本: {0}\nArcGIS内核版本: {1}\nPython版本: {2}\n操作系统: {3}\nGithub开源地址: https://github.com/PluginsKers/ArcPy_Scripts\n--------------------------------------------------------------------------".format(__CONFIG__['version'], arcpy.GetInstallInfo()['Version'], sys.version, sys.platform))
 
 # 读取基础框架信息
 f = open(u"{0}{1}".format(__PATH__, __CONFIG__['frame']), "rb")
@@ -132,7 +132,7 @@ if os.path.exists(sys.argv[1]):
 
             for o in data[index]:
                 fr += u"\nJ{},{},{},{}".format(o['index'],
-                                                   o['type'], o['x'], o['y'])
+                                               o['type'], o['x'], o['y'])
 
             __FRAME__ += fr
 
