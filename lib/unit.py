@@ -112,8 +112,8 @@ class ConvUnit:
 
                             c={}
                             column=point.split(" ")
-                            c['x']=column[1]
-                            c['y']=column[2]
+                            c['x']=column[2]
+                            c['y']=column[1]
                             c['type']=type
                             c['index']=index
                             index += 1

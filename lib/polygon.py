@@ -5,6 +5,8 @@ import arcpy.da
 import re
 import os
 import sys
+import chardet
+
 
 class ConvPolygon:
     def __init__(self, _CONFIG):
@@ -17,9 +19,9 @@ class ConvPolygon:
             input = open(_CONFIG['argv'][1], "rb")
             content = input.read().replace("\r\n", "\n")
             for a in re.split(r"^(.+?)@", re.split(r"\[.*\]", content)[2], 0, re.M):
-                if len(a) > 0:
+                if len(a) > 3:
+                    print(chardet.detect(a))
                     print(a)
-
 
         else:
             print(u"目标文件不存在")
