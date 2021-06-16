@@ -6,7 +6,7 @@ import re
 import os
 import sys
 import unit
-import polygon
+# import polygon
 
 if __name__ == '__main__':
     __PATH__ = (sys.path[0] + "\\..\\").decode("utf8", "ignore")
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     os.system('cls')
     if switch is "1":
         unit.ConvUnit(_CONFIG)
-    elif switch is "2":
-        polygon.ConvPolygon(_CONFIG)
+    # elif switch is "2":
+    #     polygon.ConvPolygon(_CONFIG)
     else:
         print(u"警告：请填写正确的信息")
